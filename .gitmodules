@@ -1,0 +1,3 @@
+[submodule "fygemu"]
+	path = fygemu
+	url = https://github.com/hirakanaKF/fygemu.git
