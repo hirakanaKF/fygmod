@@ -11,48 +11,53 @@ __[Live demo can be found here](https://hirakanakf.github.io/fygmod/)__; you may
 # Explanation of Changes #
 
 Changes of `config/emu.json.js`:
- * `UseNumbers`: 0 -> 1
-   * Disables integer cast simulation globally.
- * `NoOverkill`: 0 -> 1
-   * Disables leeching from corpses, mainly for the rumble mode.
-   * This also prevents leech under the health / shield lock.
- * `BattleMode`: 0 -> 1
-   * Default game mode to the rumble mode.
-   * You can still run 1 vs 1 mode by holding the ctrl key.
- * `VerboseAll`: 0 -> 1
-   * Shows status of each fighter every turns.
- * `ScaleFactor`: 1.0 -> 0.25
-   * This is the global damage, healing, resistant scale factor.
- * `EffectBase`: 0.0 -> 0.006931471805599453 ( ≈ log(2) / 100 )
-   * Enables ratio transforms:
-     * Healing, Leeching, Reflection: `x * 0.01` -> `1 - exp(-x * EffectBase)`
-     * Others : `x * 0.01` -> `exp(x * EffectBase)`
-   * For more details, please see `define/config.js`.
- * `DefendBase`: 0.0 -> 0.0001692253858788929 ( ≈ log(2) / 4096 )
-   * Enables custom defense mechanism:
-     * Defense damage multiplier is now `exp((attack base - defense base) * Rules::DefendBase + (attack ratio - defense ratio) / (1 + 2 * |attack ratio - defense ratio|) * log(2))`
-   * Serveral effect of skill changes to fit the custom formula:
-     * Auras:
-      * CI: +15 defense ratio.
-      * BI: +20 physical attack ratio.
-      * MO: +20 magical attack ratio.
-      * SHENG: Reduce result by 0.125 before taking `exp()`.
-      * ZHI: Halves the result in the formula before taking `exp()`.
-      * DIAN: +50 defense ratio.
-      * HONG: Calculates damage using the higher multiplier.
-      * JUE: 0.75x damage taken from physical / magical damage, 0.5x damage taken from absolute damage.
-      * DUNH: Calculates the multiplier using `1 + tanh()` instead of `exp()`.
-     * Personal skills:
-      * WU: +20 defense ratio.
-      * MING: -100 defense ratio.
-   * For more details, please see `define/battle.js`.
+* `Rule` changes:
+  * `UseNumbers`: 0 -> 1
+    * Disables integer cast simulation globally.
+  * `NoOverkill`: 0 -> 1
+    * Disables leeching from corpses, mainly for the rumble mode.
+    * This also prevents leech under the health / shield lock.
+  * `BattleMode`: 0 -> 1
+    * Default game mode to the rumble mode.
+    * You can still run 1 vs 1 mode by holding the ctrl key.
+  * `VerboseAll`: 0 -> 1
+    * Shows status of each fighter every turns.
+  * `ScaleFactor`: 1.0 -> 0.25
+    * This is the global damage, healing, resistant scale factor.
+  * `EffectBase`: 0.0 -> 6.931471805599453e-3 ( ≈ log(2) / 100 )
+    * Enables ratio transforms:
+      * Healing, Leeching, Reflection: `x * 0.01` -> `1 - exp(-x * EffectBase)`
+      * Others : `x * 0.01` -> `exp(x * EffectBase)`
+    * For more details, please see `define/config.js`.
+  * `DefendBase`: 0.0 -> 1.0576586617430806e-5  ( ≈ log(2) / 65536 )
+    * Enables custom defense mechanism:
+      * Defense damage multiplier is now `exp((attack base - defense base) * Rules::DefendBase + (attack ratio) / (100 + 2 * |attack ratio|) - (defense ratio) / (100 + 2 * |defense ratio|))`
+    * Serveral effect of skill changes to fit the custom formula:
+      * Auras:
+        * CI: +10 defense ratio.
+        * BI: +15 physical attack ratio.
+        * MO: +15 magical attack ratio.
+        * SHENG: Reduce result by 0.125 before taking `exp()`.
+        * ZHI: Halves the result in the formula before taking `exp()`.
+        * DIAN: +100 defense ratio.
+        * HONG: Calculates damage using the higher multiplier.
+        * JUE: 0.75x damage taken from physical / magical damage, 0.5x damage taken from absolute damage.
+        * DUNH: Calculates the multiplier using `1 + tanh()` instead of `exp()`.
+      * Personal skills:
+        * WU: +30 defense ratio.
+        * MING: -200 defense ratio.
+    * For more details, please see `define/battle.js`.
+  * `SklAdd` : 99 -> 1024
+  * `CrtAdd` : 99 -> 1024
+  * `SklOffset` : 0.3 -> 0.5
+  * `CrtOffset` : 0.3 -> 0.5
  * `BaseStat` changes:
-   * STR: +10 Physical Power, __+3__ Physical Attack, __+1 Skill Activation__, __+0.5 Skill Evade__ 
-   * AGI: +3 Speed, __+2 Critical Attack__, +1 Critical Trigger, __+0.5 Critical Dodge__
-   * INT: +12 Magical Power, __+3__ Magical Attack, __+1__ Skill Activation, __+0.5 Skill Evade__ 
-   * VIT: __+64__ Base Health, __+3__ Physical Defense, __+0.5 Critical Dodge__
-   * SPR: __+128__ Base Shield, __+2__ Physical Defense, __+2__ Magical Defense
-   * MND: __+64__ Base Health, __+3__ Magical Defense, __+0.5 Skill Evade__
+   * STR: __+12__ Physical Power, __+12__ Physical Attack, __+10 Skill Activation__, __+5 Skill Evade__ 
+   * AGI: __+6__ Speed, __+8 Critical Attack__, __+10__ Critical Trigger, __+5 Critical Dodge__
+   * INT: +12 Magical Power, __+12__ Magical Attack, __+10__ Skill Activation, __+5 Skill Evade__ 
+   * VIT: __+128__ Base Health, __+12__ Physical Defense, __+1 Physical Resistance__,  __+5 Critical Dodge__
+   * SPR: __+256__ Base Shield, __+8__ Physical Defense, __+8__ Magical Defense, __+1 Physical Resistance__, __+1 Magical Resistance__
+   * MND: __+128__ Base Health, __+12__ Magical Defense, __+1 Magical Resistance__, __+5 Skill Evade__
  * `Actors` changes:
    * Monster stats changes to fit the new formula.
  * `Equips` changes:
@@ -61,6 +66,12 @@ Changes of `config/emu.json.js`:
    * Additional stats provided by equipments are now scales with charater's level.
 
 Changes of `config/usr.json.js`:
+ * `ActorMap` / `EquipMap`:
+   * In this demo, we show you how to customize asset path.
+   * This demo use custom assets, originally grabbed from __[game-icons.net](https://game-icons.net/)__.
+     * Please refers to `demo/game-icons/license.txt` for license and further information.
+     * Many thanks to all authors who publish their creations on __game-icons.net__.
  * `RawUnit`: 0 -> 1
-   * Enables raw unit status importing / exporting for debug.
+   * Enables raw unit status import / export for debugging.
    * Hold ctrl to correct unit status automatically on import / export.
+
