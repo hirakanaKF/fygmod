@@ -30,7 +30,7 @@ Changes of `config/emu.json.js`:
    * For more details, please see `define/config.js`.
  * `DefendBase`: 0.0 -> 0.0001692253858788929 ( ≈ log(2) / 4096 )
    * Enables custom defense mechanism:
-     * Defense damage multiplier is now `exp((attack base - defense base) * Rules::DefendBase + attack ratio - defense ratio / (1 + 2 * |attack ratio - defense ratio|) * log(2))`
+     * Defense damage multiplier is now `exp((attack base - defense base) * Rules::DefendBase + (attack ratio - defense ratio) / (1 + 2 * |attack ratio - defense ratio|) * log(2))`
    * Serveral effect of skill changes to fit the custom formula:
      * Auras:
       * CI: +15 defense ratio.
