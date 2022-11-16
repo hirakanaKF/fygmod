@@ -6,7 +6,7 @@ Please clone this project with `git clone --recurse-submodules`.
 
 Update submodule using `git submodule update --remote`. 
 
-__[Live demo can be founded here](https://hirakanakf.github.io/fygmod/)__; you may need to clear browser caches to see the latest commits.
+__[Live demo can be found here](https://hirakanakf.github.io/fygmod/)__; you may need to clear browser caches to see the latest commits.
 
 # Explanation of Changes #
 
@@ -30,14 +30,14 @@ Changes of `config/emu.json.js`:
    * For more details, please see `define/config.js`.
  * `DefendBase`: 0.0 -> 0.0001692253858788929 ( ≈ log(2) / 4096 )
    * Enables custom defense mechanism:
-     * Defense damage multiplier is now `exp((attack base - defense base) * Rules::DefendBase + tanh(attack ratio - defense ratio) * log(2))`
+     * Defense damage multiplier is now `exp((attack base - defense base) * Rules::DefendBase + attack ratio - defense ratio / (1 + 2 * |attack ratio - defense ratio|) * log(2))`
    * Serveral effect of skill changes to fit the custom formula:
      * Auras:
       * CI: +15 defense ratio.
       * BI: +20 physical attack ratio.
       * MO: +20 magical attack ratio.
       * SHENG: Reduce result by 0.125 before taking `exp()`.
-      * ZHI: Halves `tanh(attack ratio - defense ratio) * log(2)` in the formula.
+      * ZHI: Halves the result in the formula before taking `exp()`.
       * DIAN: +50 defense ratio.
       * HONG: Calculates damage using the higher multiplier.
       * JUE: 0.75x damage taken from physical / magical damage, 0.5x damage taken from absolute damage.
