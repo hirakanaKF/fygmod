@@ -36,12 +36,12 @@ const gUsrJson =
         "3007": "card-7-clubs",
         "3008": "card-8-clubs",
         "3009": "card-9-clubs",
-        "3901": "animal-hide",
+        "3901": "iron-mask",
         "3902": "spider-alt",
-        "3903": "evil-moon",
-        "3904": "wolf-head",
+        "3903": "magic-lamp",
+        "3904": "anteater",
         "3905": "hunter-eyes",
-        "3906": "bully-minion"
+        "3906": "porcupine"
     },
     "EquipDir": "equip/",
     "EquipMap": {
@@ -67,7 +67,7 @@ const gUsrJson =
         "2302": "leather-armor",
         "2303": "heart-armor",
         "2304": "cloak",
-        "2305": "spiked-armor",
+        "2305": "spiked-shoulder-armor",
         "2306": "saiyan-suit",
         "2307": "cape",
         "2401": "top-hat",

@@ -29,7 +29,7 @@ Changes of `config/emu.json.js`:
       * Healing, Leeching, Reflection: `x * 0.01` -> `1 - exp(-x * EffectBase)`
       * Others : `x * 0.01` -> `exp(x * EffectBase)`
     * For more details, please see `define/config.js`.
-  * `DefendBase`: 0.0 -> 1.0576586617430806e-5  ( ≈ log(2) / 65536 )
+  * `DefendBase`: 0.0 -> 2.115317323486161e-5  ( ≈ log(2) / 32768 )
     * Enables custom defense mechanism:
       * Defense damage multiplier is now `exp((attack base - defense base) * Rules::DefendBase + (attack ratio) / (100 + 2 * |attack ratio|) - (defense ratio) / (100 + 2 * |defense ratio|))`
     * Serveral effect of skill changes to fit the custom formula:
@@ -52,12 +52,12 @@ Changes of `config/emu.json.js`:
   * `SklOffset` : 0.3 -> 0.5
   * `CrtOffset` : 0.3 -> 0.5
  * `BaseStat` changes:
-   * STR: __+12__ Physical Power, __+12__ Physical Attack, __+10 Skill Activation__, __+5 Skill Evade__ 
-   * AGI: __+6__ Speed, __+8 Critical Attack__, __+10__ Critical Trigger, __+5 Critical Dodge__
-   * INT: +12 Magical Power, __+12__ Magical Attack, __+10__ Skill Activation, __+5 Skill Evade__ 
-   * VIT: __+128__ Base Health, __+12__ Physical Defense, __+1 Physical Resistance__,  __+5 Critical Dodge__
-   * SPR: __+256__ Base Shield, __+8__ Physical Defense, __+8__ Magical Defense, __+1 Physical Resistance__, __+1 Magical Resistance__
-   * MND: __+128__ Base Health, __+12__ Magical Defense, __+1 Magical Resistance__, __+5 Skill Evade__
+   * STR: __+12__ Physical Power, __+12__ Physical Attack, __+3 Skill Activation__, __+3 Critical Trigger__ 
+   * AGI: __+6__ Speed, __+6 Critical Attack__, __+12__ Critical Trigger, __+3 Critical Dodge__
+   * INT: +12 Magical Power, __+12__ Magical Attack, __+12__ Skill Activation, __+3 Skill Evade__ 
+   * VIT: __+128__ Base Health, __+12__ Physical Defense, __+1 Physical Resistance__,  __+12 Critical Dodge__
+   * SPR: __+256__ Base Shield, __+6__ Physical Defense, __+6__ Magical Defense, __+1 Physical Resistance__, __+1 Magical Resistance__
+   * MND: __+128__ Base Health, __+12__ Magical Defense, __+1 Magical Resistance__, __+12 Skill Evade__
  * `Actors` changes:
    * Monster stats changes to fit the new formula.
  * `Equips` changes:
@@ -68,9 +68,9 @@ Changes of `config/emu.json.js`:
 Changes of `config/usr.json.js`:
  * `ActorMap` / `EquipMap`:
    * In this demo, we show you how to customize asset path.
-   * This demo use custom assets, originally grabbed from __[game-icons.net](https://game-icons.net/)__.
-     * Please refers to `demo/game-icons/license.txt` for license and further information.
-     * Many thanks to all authors who publish their creations on __game-icons.net__.
+   * This demo use custom assets, which were processed from __[game-icons.net](https://game-icons.net/)__.
+     * Please refers to `demo/game-icons/license.txt` for their license and further information.
+     * Many thanks to all creaters who published their creations on __game-icons.net__.
  * `RawUnit`: 0 -> 1
    * Enables raw unit status import / export for debugging.
    * Hold ctrl to correct unit status automatically on import / export.
