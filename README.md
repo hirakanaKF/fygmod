@@ -56,7 +56,7 @@ Changes of `config/emu.json.js`:
    * AGI: __+6__ Speed, __+6 Critical Attack__, __+12__ Critical Hit, __+3 Critical Dodge__
    * INT: +12 Magical Power, __+12__ Magical Attack, __+12__ Skill Trigger, __+3 Skill Evade__ 
    * VIT: __+128__ Base Health, __+12__ Physical Defense, __+1 Physical Resistance__,  __+12 Critical Dodge__
-   * SPR: __+256__ Base Shield, __+6__ Physical Defense, __+6__ Magical Defense, __+1 Physical Resistance__, __+1 Magical Resistance__
+   * SPR: __+160__ Base Shield, __+6__ Physical Defense, __+6__ Magical Defense, __+1 Physical Resistance__, __+1 Magical Resistance__
    * MND: __+128__ Base Health, __+12__ Magical Defense, __+1 Magical Resistance__, __+12 Skill Evade__
  * `Actors` changes:
    * Monster stats changes to fit the new formula.

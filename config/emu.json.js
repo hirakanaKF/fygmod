@@ -26,7 +26,7 @@ const gEmuJson =
             "nAgi": {"nSpdMul": 6, "nAtkMulC": 6, "nCrtMul": 12, "nDodMul": 3},
             "nInt": {"nPowMulM": 12, "nAtkMulM": 12, "nSklMul": 12, "nEvaMul": 3},
             "nVit": {"nHpMaxMul": 128, "nDefMulP": 12, "nDodMul": 12, "nResMulP": 1},
-            "nSpr": {"nSdMaxMul": 256, "nDefMulP": 6, "nDefMulM": 6, "nResMulP": 1, "nResMulM": 1},
+            "nSpr": {"nSdMaxMul": 160, "nDefMulP": 6, "nDefMulM": 6, "nResMulP": 1, "nResMulM": 1},
             "nMnd": {"nHpMaxMul": 128, "nDefMulM": 12, "nEvaMul": 12, "nResMulM": 1}
         },
         "Mul": {
@@ -52,7 +52,7 @@ const gEmuJson =
         "3009": {},
         "3901": {
             "stats": {
-                "nHpMaxAdd": [384, 384], "nSdMaxAdd": [384, 384],
+                "nHpMaxAdd": [256, 256], "nSdMaxAdd": [256, 256],
                 "nPowAddP": [6, 6], "nPowAddM": [6, 6],
                 "nSpdAdd": [3, 3],
                 "nAtkAddP": [6, 6], "nAtkAddM": [6, 6], "nAtkAddC": [3, 3],
@@ -64,61 +64,61 @@ const gEmuJson =
         },
         "3902": {
             "stats": {
-                "nHpMaxAdd": [8, 8], "nSdMaxAdd": [448, 448],
-                "nPowAddP": [0, 0], "nPowAddM": [24, 24],
+                "nHpMaxAdd": [8, 8], "nSdMaxAdd": [320, 320],
+                "nPowAddP": [0, 0], "nPowAddM": [36, 36],
                 "nSpdAdd": [9, 9],
                 "nAtkAddP": [0, 0], "nAtkAddM": [9, 9], "nAtkAddC": [6, 6],
                 "nDefAddP": [8, 8], "nDefAddM": [8, 8],
-                "nSklAdd": [12, 12], "nCrtAdd": [12, 12],
+                "nSklAdd": [9, 9], "nCrtAdd": [9, 9],
                 "nEvaAdd": [4, 4], "nDodAdd": [0, 0],
                 "nRflRat": [0, 0]
             }
         },
         "3903": {
             "stats": {
-                "nHpMaxAdd": [0, 1], "nSdMaxAdd": [896, 896],
+                "nHpMaxAdd": [0, 1], "nSdMaxAdd": [448, 448],
                 "nPowAddP": [0, 0], "nPowAddM": [0, 0],
                 "nSpdAdd": [1, 1],
                 "nAtkAddP": [0, 0], "nAtkAddM": [24, 24], "nAtkAddC": [0, 0],
-                "nDefAddP": [2, 2], "nDefAddM": [24, 24],
-                "nSklAdd": [24, 448], "nCrtAdd": [0, 0],
-                "nEvaAdd": [12, 224], "nDodAdd": [4, 4],
+                "nDefAddP": [1, 1], "nDefAddM": [24, 24],
+                "nSklAdd": [24, 480], "nCrtAdd": [0, 0],
+                "nEvaAdd": [9, 180], "nDodAdd": [4, 4],
                 "nRflRat": [0, 0]
             }
         },
         "3904": {
             "stats": {
-                "nHpMaxAdd": [512, 512], "nSdMaxAdd": [0, 0],
+                "nHpMaxAdd": [384, 384], "nSdMaxAdd": [0, 0],
                 "nPowAddP": [16, 16], "nPowAddM": [0, 0],
                 "nSpdAdd": [0, 0],
-                "nAtkAddP": [2, 2], "nAtkAddM": [0, 0], "nAtkAddC": [12, 12],
+                "nAtkAddP": [0, 0], "nAtkAddM": [0, 0], "nAtkAddC": [12, 12],
                 "nDefAddP": [12, 12], "nDefAddM": [12, 12],
-                "nSklAdd": [6, 6], "nCrtAdd": [24, 448],
-                "nEvaAdd": [9, 9], "nDodAdd": [9, 9],
+                "nSklAdd": [6, 6], "nCrtAdd": [24, 480],
+                "nEvaAdd": [8, 8], "nDodAdd": [8, 8],
                 "nRflRat": [0, 8]
             }
         },
         "3905": {
             "stats": {
-                "nHpMaxAdd": [384, 384], "nSdMaxAdd": [0, 0],
-                "nPowAddP": [24, 24], "nPowAddM": [0, 0],
+                "nHpMaxAdd": [320, 320], "nSdMaxAdd": [0, 0],
+                "nPowAddP": [36, 36], "nPowAddM": [0, 0],
                 "nSpdAdd": [9, 9],
                 "nAtkAddP": [24, 24], "nAtkAddM": [0, 0], "nAtkAddC": [0, 0],
-                "nDefAddP": [0, 0], "nDefAddM": [0, 0],
-                "nSklAdd": [9, 9], "nCrtAdd": [9, 9],
+                "nDefAddP": [1, 1], "nDefAddM": [1, 1],
+                "nSklAdd": [12, 12], "nCrtAdd": [12, 12],
                 "nEvaAdd": [0, 0], "nDodAdd": [0, 0],
                 "nRflRat": [0, 0]
             }
         },
         "3906": {
             "stats": {
-                "nHpMaxAdd": [768, 768], "nSdMaxAdd": [0, 0],
+                "nHpMaxAdd": [448, 448], "nSdMaxAdd": [0, 0],
                 "nPowAddP": [8, 8], "nPowAddM": [0, 0],
                 "nSpdAdd": [1, 1],
                 "nAtkAddP": [9, 9], "nAtkAddM": [2, 2], "nAtkAddC": [0, 0],
-                "nDefAddP": [24, 24], "nDefAddM": [2, 2],
+                "nDefAddP": [24, 24], "nDefAddM": [1, 1],
                 "nSklAdd": [6, 6], "nCrtAdd": [0, 0],
-                "nEvaAdd": [0, 0], "nDodAdd": [12, 224],
+                "nEvaAdd": [0, 0], "nDodAdd": [9, 180],
                 "nRflRat": [0.125, 8]
             }
         }
