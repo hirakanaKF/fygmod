@@ -29,9 +29,9 @@ Changes of `config/emu.json.js`:
       * Healing, Leeching, Reflection: `x * 0.01` -> `1 - exp(-x * EffectBase)`
       * Others : `x * 0.01` -> `exp(x * EffectBase)`
     * For more details, please see `define/config.js`.
-  * `DefendBase`: 0.0 -> 2.115317323486161e-5  ( ≈ log(2) / 32768 )
+  * `DefendBase`: 0.0 -> 65536.0
     * Enables custom defense mechanism:
-      * Defense damage multiplier is now `exp((attack base - defense base) * Rules::DefendBase + (attack ratio) / (100 + 2 * |attack ratio|) - (defense ratio) / (100 + 2 * |defense ratio|))`
+      * Defense damage multiplier is now `exp(log(2) * (log(attack base + Rules::DefendBase) - log(defense base + Rules::DefendBase)) + (attack ratio) / (100 + 2 * |attack ratio|) - (defense ratio) / (100 + 2 * |defense ratio|)))`
     * Serveral effect of skill changes to fit the custom formula:
       * Auras:
         * CI: +10 defense ratio.

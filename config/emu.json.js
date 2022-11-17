@@ -8,7 +8,7 @@ const gEmuJson =
         "VerboseAll": 1,
         "ScaleFactor": 0.25,
         "EffectBase": 2.7076061740622863e-3,
-        "DefendBase": 2.115317323486161e-5,
+        "DefendBase": 65536.0,
         "DefMul1": 0.1,
         "DefMul2": 0.01,
         "SpdRatMin": -80,
