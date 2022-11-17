@@ -57,8 +57,8 @@ const gEmuJson =
                 "nSpdAdd": [3, 3],
                 "nAtkAddP": [6, 6], "nAtkAddM": [6, 6], "nAtkAddC": [3, 3],
                 "nDefAddP": [9, 9], "nDefAddM": [9, 9],
-                "nSklAdd": [7.5, 7.5], "nCrtAdd": [7.5, 7.5],
-                "nEvaAdd": [7.5, 7.5], "nDodAdd": [7.5, 7.5],
+                "nSklAdd": [8, 8], "nCrtAdd": [8, 8],
+                "nEvaAdd": [4, 4], "nDodAdd": [4, 4],
                 "nRflRat": [0, 0]
             }
         },
@@ -70,7 +70,7 @@ const gEmuJson =
                 "nAtkAddP": [0, 0], "nAtkAddM": [9, 9], "nAtkAddC": [6, 6],
                 "nDefAddP": [8, 8], "nDefAddM": [8, 8],
                 "nSklAdd": [9, 9], "nCrtAdd": [9, 9],
-                "nEvaAdd": [4, 4], "nDodAdd": [0, 0],
+                "nEvaAdd": [3, 3], "nDodAdd": [0, -1024],
                 "nRflRat": [0, 0]
             }
         },
@@ -82,7 +82,7 @@ const gEmuJson =
                 "nAtkAddP": [0, 0], "nAtkAddM": [24, 24], "nAtkAddC": [0, 0],
                 "nDefAddP": [1, 1], "nDefAddM": [24, 24],
                 "nSklAdd": [24, 480], "nCrtAdd": [0, 0],
-                "nEvaAdd": [9, 180], "nDodAdd": [4, 4],
+                "nEvaAdd": [5, 5], "nDodAdd": [3, 3],
                 "nRflRat": [0, 0]
             }
         },
@@ -91,10 +91,10 @@ const gEmuJson =
                 "nHpMaxAdd": [384, 384], "nSdMaxAdd": [0, 0],
                 "nPowAddP": [16, 16], "nPowAddM": [0, 0],
                 "nSpdAdd": [0, 0],
-                "nAtkAddP": [0, 0], "nAtkAddM": [0, 0], "nAtkAddC": [12, 12],
+                "nAtkAddP": [1, 1], "nAtkAddM": [1, 1], "nAtkAddC": [12, 12],
                 "nDefAddP": [12, 12], "nDefAddM": [12, 12],
                 "nSklAdd": [6, 6], "nCrtAdd": [24, 480],
-                "nEvaAdd": [8, 8], "nDodAdd": [8, 8],
+                "nEvaAdd": [2, 2], "nDodAdd": [0, 0],
                 "nRflRat": [0, 8]
             }
         },
@@ -106,7 +106,7 @@ const gEmuJson =
                 "nAtkAddP": [24, 24], "nAtkAddM": [0, 0], "nAtkAddC": [0, 0],
                 "nDefAddP": [1, 1], "nDefAddM": [1, 1],
                 "nSklAdd": [12, 12], "nCrtAdd": [12, 12],
-                "nEvaAdd": [0, 0], "nDodAdd": [0, 0],
+                "nEvaAdd": [0, -1024], "nDodAdd": [0, -1024],
                 "nRflRat": [0, 0]
             }
         },
@@ -118,7 +118,7 @@ const gEmuJson =
                 "nAtkAddP": [9, 9], "nAtkAddM": [2, 2], "nAtkAddC": [0, 0],
                 "nDefAddP": [24, 24], "nDefAddM": [1, 1],
                 "nSklAdd": [6, 6], "nCrtAdd": [0, 0],
-                "nEvaAdd": [0, 0], "nDodAdd": [9, 180],
+                "nEvaAdd": [0, -1024], "nDodAdd": [24, 480],
                 "nRflRat": [0.125, 8]
             }
         }
