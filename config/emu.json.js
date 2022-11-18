@@ -56,12 +56,12 @@ const gEmuJson =
         "3901": {
             "stats": {
                 "nHpMaxAdd": [256, 256], "nSdMaxAdd": [256, 256],
-                "nPowAddP": [6, 6], "nPowAddM": [6, 6],
+                "nPowAddP": [9, 9], "nPowAddM": [9, 9],
                 "nSpdAdd": [3, 3],
-                "nAtkAddP": [6, 6], "nAtkAddM": [6, 6], "nAtkAddC": [3, 3],
-                "nDefAddP": [9, 9], "nDefAddM": [9, 9],
+                "nAtkAddP": [6, 6], "nAtkAddM": [6, 6], "nAtkAddC": [2, 2],
+                "nDefAddP": [8, 8], "nDefAddM": [8, 8],
                 "nSklAdd": [6, 6], "nCrtAdd": [6, 6],
-                "nEvaAdd": [4, 4], "nDodAdd": [4, 4],
+                "nEvaAdd": [3, 3], "nDodAdd": [3, 3],
                 "nRflRat": [0, 0]
             }
         },
@@ -70,8 +70,8 @@ const gEmuJson =
                 "nHpMaxAdd": [8, 8], "nSdMaxAdd": [320, 320],
                 "nPowAddP": [0, 0], "nPowAddM": [36, 36],
                 "nSpdAdd": [9, 9],
-                "nAtkAddP": [0, 0], "nAtkAddM": [9, 9], "nAtkAddC": [6, 6],
-                "nDefAddP": [8, 8], "nDefAddM": [8, 8],
+                "nAtkAddP": [0, 0], "nAtkAddM": [9, 9], "nAtkAddC": [4, 4],
+                "nDefAddP": [6, 6], "nDefAddM": [12, 12],
                 "nSklAdd": [9, 9], "nCrtAdd": [9, 9],
                 "nEvaAdd": [3, 3], "nDodAdd": [0, -1024],
                 "nRflRat": [0, 0]
@@ -79,7 +79,7 @@ const gEmuJson =
         },
         "3903": {
             "stats": {
-                "nHpMaxAdd": [0, 1], "nSdMaxAdd": [448, 448],
+                "nHpMaxAdd": [0, 1], "nSdMaxAdd": [512, 512],
                 "nPowAddP": [0, 0], "nPowAddM": [0, 0],
                 "nSpdAdd": [1, 1],
                 "nAtkAddP": [0, 0], "nAtkAddM": [24, 24], "nAtkAddC": [0, 0],
@@ -91,11 +91,11 @@ const gEmuJson =
         },
         "3904": {
             "stats": {
-                "nHpMaxAdd": [320, 320], "nSdMaxAdd": [0, 0],
+                "nHpMaxAdd": [384, 384], "nSdMaxAdd": [0, 0],
                 "nPowAddP": [16, 16], "nPowAddM": [0, 0],
                 "nSpdAdd": [0, 0],
-                "nAtkAddP": [1, 1], "nAtkAddM": [1, 1], "nAtkAddC": [12, 12],
-                "nDefAddP": [12, 12], "nDefAddM": [12, 12],
+                "nAtkAddP": [1, 1], "nAtkAddM": [1, 1], "nAtkAddC": [8, 8],
+                "nDefAddP": [12, 12], "nDefAddM": [6, 6],
                 "nSklAdd": [6, 6], "nCrtAdd": [12, 12],
                 "nEvaAdd": [1, 1], "nDodAdd": [2, 2],
                 "nRflRat": [0, 128]
@@ -115,8 +115,8 @@ const gEmuJson =
         },
         "3906": {
             "stats": {
-                "nHpMaxAdd": [384, 384], "nSdMaxAdd": [0, 0],
-                "nPowAddP": [8, 8], "nPowAddM": [0, 0],
+                "nHpMaxAdd": [448, 448], "nSdMaxAdd": [0, 0],
+                "nPowAddP": [4, 4], "nPowAddM": [0, 0],
                 "nSpdAdd": [1, 1],
                 "nAtkAddP": [9, 9], "nAtkAddM": [2, 2], "nAtkAddC": [0, 0],
                 "nDefAddP": [24, 24], "nDefAddM": [1, 1],
