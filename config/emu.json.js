@@ -18,6 +18,9 @@ const gEmuJson =
         "SdHeal": 0.25,
         "SklOffset": 0.5,
         "CrtOffset": 0.5,
+        "RflPowP": 0.75,
+        "RflPowM": 0.5,
+        "RflPowA": 1.0,
         "RoundMax": 100
     },
     "BaseStat": {
@@ -57,7 +60,7 @@ const gEmuJson =
                 "nSpdAdd": [3, 3],
                 "nAtkAddP": [6, 6], "nAtkAddM": [6, 6], "nAtkAddC": [3, 3],
                 "nDefAddP": [9, 9], "nDefAddM": [9, 9],
-                "nSklAdd": [8, 8], "nCrtAdd": [8, 8],
+                "nSklAdd": [6, 6], "nCrtAdd": [6, 6],
                 "nEvaAdd": [4, 4], "nDodAdd": [4, 4],
                 "nRflRat": [0, 0]
             }
@@ -81,45 +84,45 @@ const gEmuJson =
                 "nSpdAdd": [1, 1],
                 "nAtkAddP": [0, 0], "nAtkAddM": [24, 24], "nAtkAddC": [0, 0],
                 "nDefAddP": [1, 1], "nDefAddM": [24, 24],
-                "nSklAdd": [24, 480], "nCrtAdd": [0, 0],
-                "nEvaAdd": [5, 5], "nDodAdd": [3, 3],
+                "nSklAdd": [12, 12], "nCrtAdd": [0, 0],
+                "nEvaAdd": [5, 5], "nDodAdd": [1, 1],
                 "nRflRat": [0, 0]
             }
         },
         "3904": {
             "stats": {
-                "nHpMaxAdd": [384, 384], "nSdMaxAdd": [0, 0],
+                "nHpMaxAdd": [320, 320], "nSdMaxAdd": [0, 0],
                 "nPowAddP": [16, 16], "nPowAddM": [0, 0],
                 "nSpdAdd": [0, 0],
                 "nAtkAddP": [1, 1], "nAtkAddM": [1, 1], "nAtkAddC": [12, 12],
                 "nDefAddP": [12, 12], "nDefAddM": [12, 12],
-                "nSklAdd": [6, 6], "nCrtAdd": [24, 480],
-                "nEvaAdd": [2, 2], "nDodAdd": [0, 0],
-                "nRflRat": [0, 8]
+                "nSklAdd": [6, 6], "nCrtAdd": [12, 12],
+                "nEvaAdd": [1, 1], "nDodAdd": [2, 2],
+                "nRflRat": [0, 128]
             }
         },
         "3905": {
             "stats": {
-                "nHpMaxAdd": [320, 320], "nSdMaxAdd": [0, 0],
+                "nHpMaxAdd": [192, 192], "nSdMaxAdd": [0, 0],
                 "nPowAddP": [36, 36], "nPowAddM": [0, 0],
                 "nSpdAdd": [9, 9],
                 "nAtkAddP": [24, 24], "nAtkAddM": [0, 0], "nAtkAddC": [0, 0],
                 "nDefAddP": [1, 1], "nDefAddM": [1, 1],
-                "nSklAdd": [12, 12], "nCrtAdd": [12, 12],
+                "nSklAdd": [9, 9], "nCrtAdd": [9, 9],
                 "nEvaAdd": [0, -1024], "nDodAdd": [0, -1024],
                 "nRflRat": [0, 0]
             }
         },
         "3906": {
             "stats": {
-                "nHpMaxAdd": [448, 448], "nSdMaxAdd": [0, 0],
+                "nHpMaxAdd": [384, 384], "nSdMaxAdd": [0, 0],
                 "nPowAddP": [8, 8], "nPowAddM": [0, 0],
                 "nSpdAdd": [1, 1],
                 "nAtkAddP": [9, 9], "nAtkAddM": [2, 2], "nAtkAddC": [0, 0],
                 "nDefAddP": [24, 24], "nDefAddM": [1, 1],
                 "nSklAdd": [6, 6], "nCrtAdd": [0, 0],
-                "nEvaAdd": [0, -1024], "nDodAdd": [24, 480],
-                "nRflRat": [0.125, 8]
+                "nEvaAdd": [0, -1024], "nDodAdd": [6, 6],
+                "nRflRat": [0.0625, 256]
             }
         }
     },
@@ -158,24 +161,24 @@ const gEmuJson =
         },
         "2101": {
             "stats": [
-                ["nPowAddP", 1600.00, 0.00, 0.01],
-                ["nAtkAddP", 480.00, 40000.00, 0.01],
+                ["nPowAddP", 600.00, 0.00, 0.01],
+                ["nAtkAddP", 360.00, 40000.00, 0.01],
                 ["nAtkRatP", 5.00, 500.00, 0.01],
                 ["nSklAdd", 960.00, 0.00, 0.01]
             ]
         },
         "2102": {
             "stats": [
-                ["nPowAddP", 1200.00, 0.00, 0.01],
-                ["nPowAddM", 1200.00, 0.00, 0.01],
-                ["nSpdAdd", 240.00, 0.00, 0.01],
-                ["nAtkAddC", 480.00, 40000.00, 0.01]
+                ["nPowAddP", 450.00, 0.00, 0.01],
+                ["nPowAddM", 450.00, 0.00, 0.01],
+                ["nSpdAdd", 120.00, 0.00, 0.01],
+                ["nAtkAddC", 360.00, 40000.00, 0.01]
             ]
         },
         "2103": {
             "stats": [
-                ["nPowAddM", 1600.00, 0.00, 0.01],
-                ["nAtkAddM", 480.00, 40000.00, 0.01],
+                ["nPowAddM", 600.00, 0.00, 0.01],
+                ["nAtkAddM", 360.00, 40000.00, 0.01],
                 ["nAtkRatM", 5.00, 500.00, 0.01],
                 ["nSklAdd", 960.00, 0.00, 0.01]
             ]
@@ -201,7 +204,7 @@ const gEmuJson =
                 ["nPowMulP", 20.00, 0.00, 0.01],
                 ["nPowMulM", 20.00, 0.00, 0.01],
                 ["nSpdMul", 20.00, 2500.00, 0.01],
-                ["nSpdAdd", 160.00, 0.00, 0.01]
+                ["nSpdAdd", 120.00, 0.00, 0.01]
             ]
         },
         "2107": {
@@ -216,14 +219,14 @@ const gEmuJson =
             "stats": [
                 ["nLchRat", 7.00, 1000.00, 0.01],
                 ["nRflRat", 7.00, 0.00, 0.01],
-                ["nDefAddP", 400.00, 0.00, 0.01],
-                ["nDefAddM", 400.00, 0.00, 0.01]
+                ["nDefAddP", 300.00, 0.00, 0.01],
+                ["nDefAddM", 300.00, 0.00, 0.01]
             ]
         },
         "2109": {
             "stats": [
-                ["nPowAddP", 1200.00, 0.00, 0.01],
-                ["nPowAddP", 1200.00, 0.00, 0.01],
+                ["nPowAddP", 450.00, 0.00, 0.01],
+                ["nPowAddP", 450.00, 0.00, 0.01],
                 ["nPowMulP", 20.00, 3000.00, 0.01],
                 ["nAtkRatC", 5.00, 100.00, 0.01]
             ]
@@ -231,25 +234,25 @@ const gEmuJson =
         "2110": {
             "stats": [
                 ["nCrtAdd", 800.00, 0.00, 0.01],
-                ["nAtkAddP", 400.00, 0.00, 0.01],
-                ["nAtkAddM", 400.00, 0.00, 0.01],
-                ["nAtkAddC", 400.00, 0.00, 0.01]
+                ["nAtkAddP", 300.00, 0.00, 0.01],
+                ["nAtkAddM", 300.00, 0.00, 0.01],
+                ["nAtkAddC", 300.00, 0.00, 0.01]
             ]
         },
         "2201": {
             "stats": [
-                ["nPowAddP", 1200.00, 0.00, 0.01],
-                ["nPowAddM", 1200.00, 0.00, 0.01],
-                ["nSpdAdd", 240.00, 0.00, 0.01],
+                ["nPowAddP", 450.00, 0.00, 0.01],
+                ["nPowAddM", 450.00, 0.00, 0.01],
+                ["nSpdAdd", 120.00, 0.00, 0.01],
                 ["nCrtAdd", 960.00, 0.00, 0.01]
             ]
         },
         "2202": {
             "stats": [
                 ["nPowMulM", 20.00, 100.00, 0.01],
-                ["nAtkAddM", 480.00, 4000.00, 0.01],
-                ["nSdMaxAdd", 3600.00, 0.00, 0.01],
-                ["nDefAddM", 480.00, 4000.00, 0.01]
+                ["nAtkAddM", 360.00, 4000.00, 0.01],
+                ["nSdMaxAdd", 2400.00, 0.00, 0.01],
+                ["nDefAddM", 360.00, 4000.00, 0.01]
             ]
         },
         "2203": {
@@ -262,15 +265,15 @@ const gEmuJson =
         },
         "2204": {
             "stats": [
-                ["nAtkAddP", 200.00, 0.00, 0.01],
-                ["nAtkAddM", 200.00, 0.00, 0.01],
+                ["nAtkAddP", 150.00, 0.00, 0.01],
+                ["nAtkAddM", 150.00, 0.00, 0.01],
                 ["nCrtAdd", 640.00, 0.00, 0.01],
                 ["nSklAdd", 640.00, 0.00, 0.01]
             ]
         },
         "2205": {
             "stats": [
-                ["nAtkAddM", 200.00, 0.00, 0.01],
+                ["nAtkAddM", 150.00, 0.00, 0.01],
                 ["nSklAdd", 640.00, 0.00, 0.01],
                 ["nHpMaxAddStr", 30.0, 0.00, 0.01],
                 ["nHpMaxMul", 7.00, 0.00, 0.01]
@@ -278,7 +281,7 @@ const gEmuJson =
         },
         "2301": {
             "stats": [
-                ["nHpMaxAdd", 7200.00, 0.00, 0.01],
+                ["nHpMaxAdd", 4800.00, 0.00, 0.01],
                 ["nDefRatP", 5.00, 500.00, 0.01],
                 ["nDefRatM", 5.00, 500.00, 0.01],
                 ["nRflRat", 8.00, 0.00, 0.01]
@@ -286,72 +289,72 @@ const gEmuJson =
         },
         "2302": {
             "stats": [
-                ["nHpMaxAdd", 9600.00, 0.00, 0.01],
-                ["nDefAddP", 480.00, 0.00, 0.01],
-                ["nDefAddM", 480.00, 0.00, 0.01],
-                ["nHpHealAdd", 2400.00, 0.00, 0.01]
+                ["nHpMaxAdd", 6400.00, 0.00, 0.01],
+                ["nDefAddP", 360.00, 0.00, 0.01],
+                ["nDefAddM", 360.00, 0.00, 0.01],
+                ["nHpHealAdd", 1600.00, 0.00, 0.01]
             ]
         },
         "2303": {
             "stats": [
-                ["nHpMaxAdd", 9600.00, 0.00, 0.01],
+                ["nHpMaxAdd", 6400.00, 0.00, 0.01],
                 ["nEvaAdd", 960.00, 0.00, 0.01],
                 ["nDodAdd", 960.00, 0.00, 0.01],
-                ["nHpHealAdd", 2400.00, 0.00, 0.01]
+                ["nHpHealAdd", 1600.00, 0.00, 0.01]
             ]
         },
         "2304": {
             "stats": [
-                ["nHpMaxAdd", 2400.00, 0.00, 0.01],
-                ["nSdHealAdd", 3200.00, 0.00, 0.01],
+                ["nHpMaxAdd", 1600.00, 0.00, 0.01],
+                ["nSdHealAdd", 2400.00, 0.00, 0.01],
                 ["nSdMaxMul", 20.00, 2500.00, 0.01],
-                ["nSdMaxAdd", 9600.00, 0.00, 0.01]
+                ["nSdMaxAdd", 6400.00, 0.00, 0.01]
             ]
         },
         "2305": {
             "stats": [
                 ["nHpMaxMul", 20.00, 2000.00, 0.01],
-                ["nDefAddP", 400.00, 0.00, 0.01],
-                ["nDefAddM", 400.00, 0.00, 0.01],
+                ["nDefAddP", 300.00, 0.00, 0.01],
+                ["nDefAddM", 300.00, 0.00, 0.01],
                 ["nRflRat", 7.00, 1000.00, 0.01]
             ]
         },
         "2306": {
             "stats": [
                 ["nHpMaxMul", 20.00, 5000.00, 0.01],
-                ["nHpMaxAdd", 7200.00, 0.00, 0.01],
-                ["nDefAddP", 160.00, 0.00, 0.01],
-                ["nHpHealAdd", 2400.00, 0.00, 0.01]
+                ["nHpMaxAdd", 4800.00, 0.00, 0.01],
+                ["nDefAddP", 120.00, 0.00, 0.01],
+                ["nHpHealAdd", 1600.00, 0.00, 0.01]
             ]
         },
         "2307": {
             "stats": [
                 ["nSdMaxMul", 20.00, 5000.00, 0.01],
-                ["nSdMaxAdd", 12000.00, 0.00, 0.01],
-                ["nDefAddM", 480.00, 0.00, 0.01],
+                ["nSdMaxAdd", 8000.00, 0.00, 0.01],
+                ["nDefAddM", 360.00, 0.00, 0.01],
                 ["nDefRatM", 5.00, 1000.00, 0.01]
             ]
         },
         "2401": {
             "stats": [
-                ["nHpMaxAdd", 3600.00, 0.00, 0.01],
+                ["nHpMaxAdd", 2400.00, 0.00, 0.01],
                 ["nEvaAdd", 640.00, 0.00, 0.01],
                 ["nDodAdd", 640.00, 0.00, 0.01],
-                ["nHpHealRat", 0.00, 2000.00, 0.01]
+                ["nHpHealRat", 0.00, 2400.00, 0.01]
             ]
         },
         "2402": {
             "stats": [
-                ["nHpMaxAdd", 1200.00, 0.00, 0.01],
+                ["nHpMaxAdd", 800.00, 0.00, 0.01],
                 ["nSdMaxMul", 20.00, 0.00, 0.01],
-                ["nSdMaxAdd", 4800.00, 0.00, 0.01],
-                ["nSdHealRat", 0.00, 2000.00, 0.01]
+                ["nSdMaxAdd", 3200.00, 0.00, 0.01],
+                ["nSdHealRat", 0.00, 2400.00, 0.01]
             ]
         },
         "2403": {
             "stats": [
-                ["nHpMaxAdd", 2400.00, 0.00, 0.01],
-                ["nSdMaxAdd", 4800.00, 0.00, 0.01],
+                ["nHpMaxAdd", 1600.00, 0.00, 0.01],
+                ["nSdMaxAdd", 3200.00, 0.00, 0.01],
                 ["nHpHealRat", 0.00, 3000.00, 0.01],
                 ["nSdHealRat", 0.00, 3000.00, 0.01]
             ]
