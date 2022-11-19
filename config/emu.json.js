@@ -8,7 +8,6 @@ const gEmuJson =
         "VerboseAll": 1,
         "ScaleFactor": 0.25,
         "EffectBase": 2.7076061740622863e-3,
-        "DefendBase": 65536.0,
         "DefMul1": 0.1,
         "DefMul2": 0.01,
         "SpdRatMin": -80,
@@ -25,11 +24,11 @@ const gEmuJson =
     },
     "BaseStat": {
         "Add": {
-            "nStr": {"nPowMulP": 12, "nAtkMulP": 12, "nSklMul": 3, "nCrtMul": 3},
-            "nAgi": {"nSpdMul": 6, "nAtkMulC": 6, "nCrtMul": 12, "nDodMul": 3},
-            "nInt": {"nPowMulM": 12, "nAtkMulM": 12, "nSklMul": 12, "nEvaMul": 3},
+            "nStr": {"nPowMulP": 12, "nAtkMulP": 8, "nSklMul": 4, "nCrtMul": 4},
+            "nAgi": {"nSpdMul": 6, "nAtkMulC": 8, "nCrtMul": 12, "nDodMul": 4},
+            "nInt": {"nPowMulM": 12, "nAtkMulM": 8, "nSklMul": 12, "nEvaMul": 4},
             "nVit": {"nHpMaxMul": 128, "nDefMulP": 12, "nDodMul": 12, "nResMulP": 1},
-            "nSpr": {"nSdMaxMul": 160, "nDefMulP": 6, "nDefMulM": 6, "nResMulP": 1, "nResMulM": 1},
+            "nSpr": {"nSdMaxMul": 160, "nDefMulP": 4, "nDefMulM": 4, "nResMulP": 1, "nResMulM": 1},
             "nMnd": {"nHpMaxMul": 128, "nDefMulM": 12, "nEvaMul": 12, "nResMulM": 1}
         },
         "Mul": {
@@ -58,7 +57,7 @@ const gEmuJson =
                 "nHpMaxAdd": [256, 256], "nSdMaxAdd": [256, 256],
                 "nPowAddP": [9, 9], "nPowAddM": [9, 9],
                 "nSpdAdd": [3, 3],
-                "nAtkAddP": [6, 6], "nAtkAddM": [6, 6], "nAtkAddC": [2, 2],
+                "nAtkAddP": [4, 4], "nAtkAddM": [4, 4], "nAtkAddC": [4, 4],
                 "nDefAddP": [8, 8], "nDefAddM": [8, 8],
                 "nSklAdd": [6, 6], "nCrtAdd": [6, 6],
                 "nEvaAdd": [3, 3], "nDodAdd": [3, 3],
@@ -70,8 +69,8 @@ const gEmuJson =
                 "nHpMaxAdd": [8, 8], "nSdMaxAdd": [320, 320],
                 "nPowAddP": [0, 0], "nPowAddM": [36, 36],
                 "nSpdAdd": [9, 9],
-                "nAtkAddP": [0, 0], "nAtkAddM": [9, 9], "nAtkAddC": [4, 4],
-                "nDefAddP": [6, 6], "nDefAddM": [12, 12],
+                "nAtkAddP": [0, 0], "nAtkAddM": [8, 8], "nAtkAddC": [6, 6],
+                "nDefAddP": [6, 6], "nDefAddM": [10, 10],
                 "nSklAdd": [9, 9], "nCrtAdd": [9, 9],
                 "nEvaAdd": [3, 3], "nDodAdd": [0, -1024],
                 "nRflRat": [0, 0]
@@ -82,8 +81,8 @@ const gEmuJson =
                 "nHpMaxAdd": [0, 1], "nSdMaxAdd": [512, 512],
                 "nPowAddP": [0, 0], "nPowAddM": [0, 0],
                 "nSpdAdd": [1, 1],
-                "nAtkAddP": [0, 0], "nAtkAddM": [24, 24], "nAtkAddC": [0, 0],
-                "nDefAddP": [1, 1], "nDefAddM": [24, 24],
+                "nAtkAddP": [0, 0], "nAtkAddM": [16, 16], "nAtkAddC": [0, 0],
+                "nDefAddP": [1, 1], "nDefAddM": [16, 16],
                 "nSklAdd": [12, 12], "nCrtAdd": [0, 0],
                 "nEvaAdd": [5, 5], "nDodAdd": [1, 1],
                 "nRflRat": [0, 0]
@@ -94,7 +93,7 @@ const gEmuJson =
                 "nHpMaxAdd": [384, 384], "nSdMaxAdd": [0, 0],
                 "nPowAddP": [16, 16], "nPowAddM": [0, 0],
                 "nSpdAdd": [0, 0],
-                "nAtkAddP": [1, 1], "nAtkAddM": [1, 1], "nAtkAddC": [8, 8],
+                "nAtkAddP": [1, 1], "nAtkAddM": [1, 1], "nAtkAddC": [12, 12],
                 "nDefAddP": [12, 12], "nDefAddM": [6, 6],
                 "nSklAdd": [6, 6], "nCrtAdd": [12, 12],
                 "nEvaAdd": [1, 1], "nDodAdd": [2, 2],
@@ -106,7 +105,7 @@ const gEmuJson =
                 "nHpMaxAdd": [192, 192], "nSdMaxAdd": [0, 0],
                 "nPowAddP": [36, 36], "nPowAddM": [0, 0],
                 "nSpdAdd": [9, 9],
-                "nAtkAddP": [24, 24], "nAtkAddM": [0, 0], "nAtkAddC": [0, 0],
+                "nAtkAddP": [16, 16], "nAtkAddM": [0, 0], "nAtkAddC": [0, 0],
                 "nDefAddP": [1, 1], "nDefAddM": [1, 1],
                 "nSklAdd": [9, 9], "nCrtAdd": [9, 9],
                 "nEvaAdd": [0, -1024], "nDodAdd": [0, -1024],
@@ -118,8 +117,8 @@ const gEmuJson =
                 "nHpMaxAdd": [448, 448], "nSdMaxAdd": [0, 0],
                 "nPowAddP": [4, 4], "nPowAddM": [0, 0],
                 "nSpdAdd": [1, 1],
-                "nAtkAddP": [9, 9], "nAtkAddM": [2, 2], "nAtkAddC": [0, 0],
-                "nDefAddP": [24, 24], "nDefAddM": [1, 1],
+                "nAtkAddP": [8, 8], "nAtkAddM": [2, 2], "nAtkAddC": [0, 0],
+                "nDefAddP": [16, 16], "nDefAddM": [1, 1],
                 "nSklAdd": [6, 6], "nCrtAdd": [0, 0],
                 "nEvaAdd": [0, -1024], "nDodAdd": [6, 6],
                 "nRflRat": [0.0625, 256]
@@ -162,7 +161,7 @@ const gEmuJson =
         "2101": {
             "stats": [
                 ["nPowAddP", 600.00, 0.00, 0.01],
-                ["nAtkAddP", 360.00, 40000.00, 0.01],
+                ["nAtkAddP", 240.00, 40000.00, 0.01],
                 ["nAtkRatP", 5.00, 500.00, 0.01],
                 ["nSklAdd", 960.00, 0.00, 0.01]
             ]
@@ -172,13 +171,13 @@ const gEmuJson =
                 ["nPowAddP", 450.00, 0.00, 0.01],
                 ["nPowAddM", 450.00, 0.00, 0.01],
                 ["nSpdAdd", 120.00, 0.00, 0.01],
-                ["nAtkAddC", 360.00, 40000.00, 0.01]
+                ["nAtkAddC", 240.00, 40000.00, 0.01]
             ]
         },
         "2103": {
             "stats": [
                 ["nPowAddM", 600.00, 0.00, 0.01],
-                ["nAtkAddM", 360.00, 40000.00, 0.01],
+                ["nAtkAddM", 240.00, 40000.00, 0.01],
                 ["nAtkRatM", 5.00, 500.00, 0.01],
                 ["nSklAdd", 960.00, 0.00, 0.01]
             ]
@@ -196,7 +195,7 @@ const gEmuJson =
                 ["nPowMulP", 20.00, 3000.00, 0.01],
                 ["nAtkRatC", 5.00, 1000.00, 0.01],
                 ["nAtkRatP", 5.00, 1000.00, 0.01],
-                ["nAtkAddP", 200.00, 0.00, 0.01]
+                ["nAtkAddP", 120.00, 0.00, 0.01]
             ]
         },
         "2106": {
@@ -219,8 +218,8 @@ const gEmuJson =
             "stats": [
                 ["nLchRat", 7.00, 1000.00, 0.01],
                 ["nRflRat", 7.00, 0.00, 0.01],
-                ["nDefAddP", 300.00, 0.00, 0.01],
-                ["nDefAddM", 300.00, 0.00, 0.01]
+                ["nDefAddP", 200.00, 0.00, 0.01],
+                ["nDefAddM", 200.00, 0.00, 0.01]
             ]
         },
         "2109": {
@@ -234,9 +233,9 @@ const gEmuJson =
         "2110": {
             "stats": [
                 ["nCrtAdd", 800.00, 0.00, 0.01],
-                ["nAtkAddP", 300.00, 0.00, 0.01],
-                ["nAtkAddM", 300.00, 0.00, 0.01],
-                ["nAtkAddC", 300.00, 0.00, 0.01]
+                ["nAtkAddP", 200.00, 0.00, 0.01],
+                ["nAtkAddM", 200.00, 0.00, 0.01],
+                ["nAtkAddC", 200.00, 0.00, 0.01]
             ]
         },
         "2201": {
@@ -250,9 +249,9 @@ const gEmuJson =
         "2202": {
             "stats": [
                 ["nPowMulM", 20.00, 100.00, 0.01],
-                ["nAtkAddM", 360.00, 4000.00, 0.01],
+                ["nAtkAddM", 240.00, 4000.00, 0.01],
                 ["nSdMaxAdd", 2400.00, 0.00, 0.01],
-                ["nDefAddM", 360.00, 4000.00, 0.01]
+                ["nDefAddM", 240.00, 4000.00, 0.01]
             ]
         },
         "2203": {
@@ -265,15 +264,15 @@ const gEmuJson =
         },
         "2204": {
             "stats": [
-                ["nAtkAddP", 150.00, 0.00, 0.01],
-                ["nAtkAddM", 150.00, 0.00, 0.01],
+                ["nAtkAddP", 100.00, 0.00, 0.01],
+                ["nAtkAddM", 100.00, 0.00, 0.01],
                 ["nCrtAdd", 640.00, 0.00, 0.01],
                 ["nSklAdd", 640.00, 0.00, 0.01]
             ]
         },
         "2205": {
             "stats": [
-                ["nAtkAddM", 150.00, 0.00, 0.01],
+                ["nAtkAddM", 100.00, 0.00, 0.01],
                 ["nSklAdd", 640.00, 0.00, 0.01],
                 ["nHpMaxAddStr", 30.0, 0.00, 0.01],
                 ["nHpMaxMul", 7.00, 0.00, 0.01]
@@ -290,8 +289,8 @@ const gEmuJson =
         "2302": {
             "stats": [
                 ["nHpMaxAdd", 6400.00, 0.00, 0.01],
-                ["nDefAddP", 360.00, 0.00, 0.01],
-                ["nDefAddM", 360.00, 0.00, 0.01],
+                ["nDefAddP", 240.00, 0.00, 0.01],
+                ["nDefAddM", 240.00, 0.00, 0.01],
                 ["nHpHealAdd", 1600.00, 0.00, 0.01]
             ]
         },
@@ -314,8 +313,8 @@ const gEmuJson =
         "2305": {
             "stats": [
                 ["nHpMaxMul", 20.00, 2000.00, 0.01],
-                ["nDefAddP", 300.00, 0.00, 0.01],
-                ["nDefAddM", 300.00, 0.00, 0.01],
+                ["nDefAddP", 200.00, 0.00, 0.01],
+                ["nDefAddM", 200.00, 0.00, 0.01],
                 ["nRflRat", 7.00, 1000.00, 0.01]
             ]
         },
@@ -323,7 +322,7 @@ const gEmuJson =
             "stats": [
                 ["nHpMaxMul", 20.00, 5000.00, 0.01],
                 ["nHpMaxAdd", 4800.00, 0.00, 0.01],
-                ["nDefAddP", 120.00, 0.00, 0.01],
+                ["nDefAddP", 80.00, 0.00, 0.01],
                 ["nHpHealAdd", 1600.00, 0.00, 0.01]
             ]
         },
@@ -331,7 +330,7 @@ const gEmuJson =
             "stats": [
                 ["nSdMaxMul", 20.00, 5000.00, 0.01],
                 ["nSdMaxAdd", 8000.00, 0.00, 0.01],
-                ["nDefAddM", 360.00, 0.00, 0.01],
+                ["nDefAddM", 240.00, 0.00, 0.01],
                 ["nDefRatM", 5.00, 1000.00, 0.01]
             ]
         },

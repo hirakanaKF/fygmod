@@ -10,6 +10,25 @@ __[Live demo can be found here](https://hirakanakf.github.io/fygmod/)__; you may
 
 # Explanation of Changes #
 
+Changes of `define/battle.js`:
+  * Defense damage multiplier is now `exp(log(2) * (log(attack base + DefendBase) - log(defense base + DefendBase)) + (attack ratio) / (100 + 2 * |attack ratio|) - (defense ratio) / (100 + 2 * |defense ratio|)))`
+    * In which `DefendBase`: 0.0 -> 65536.0
+  * Serveral effect of skill changes to fit the custom formula:
+    * Auras:
+      * CI: +10 defense ratio.
+      * BI: +15 physical attack ratio.
+      * MO: +15 magical attack ratio.
+      * SHENG: Reduce result by 0.125 before taking `exp()`.
+      * ZHI: Halves the result in the formula before taking `exp()`.
+      * DIAN: +100 defense ratio.
+      * HONG: Calculates damage using the higher multiplier.
+      * JUE: 0.75x damage taken from physical / magical damage, 0.5x damage taken from absolute damage.
+      * DUNH: Calculates the multiplier using `1 + tanh()` instead of `exp()`.
+    * Personal skills:
+      * WU: +30 defense ratio.
+      * MING: -200 defense ratio.
+  * For more details, please see `define/battle.js`.
+
 Changes of `config/emu.json.js`:
 * `Rule` changes:
   * `UseNumbers`: 0 -> 1
@@ -28,25 +47,7 @@ Changes of `config/emu.json.js`:
     * Enables ratio transforms:
       * Healing, Leeching, Reflection: `x * 0.01` -> `1 - exp(-x * EffectBase)`
       * Others : `x * 0.01` -> `exp(x * EffectBase)`
-    * For more details, please see `define/config.js`.
-  * `DefendBase`: 0.0 -> 65536.0
-    * Enables custom defense mechanism:
-      * Defense damage multiplier is now `exp(log(2) * (log(attack base + Rules::DefendBase) - log(defense base + Rules::DefendBase)) + (attack ratio) / (100 + 2 * |attack ratio|) - (defense ratio) / (100 + 2 * |defense ratio|)))`
-    * Serveral effect of skill changes to fit the custom formula:
-      * Auras:
-        * CI: +10 defense ratio.
-        * BI: +15 physical attack ratio.
-        * MO: +15 magical attack ratio.
-        * SHENG: Reduce result by 0.125 before taking `exp()`.
-        * ZHI: Halves the result in the formula before taking `exp()`.
-        * DIAN: +100 defense ratio.
-        * HONG: Calculates damage using the higher multiplier.
-        * JUE: 0.75x damage taken from physical / magical damage, 0.5x damage taken from absolute damage.
-        * DUNH: Calculates the multiplier using `1 + tanh()` instead of `exp()`.
-      * Personal skills:
-        * WU: +30 defense ratio.
-        * MING: -200 defense ratio.
-    * For more details, please see `define/battle.js`.
+    * For more details, please see `fygemu/define/config.js`.
   * `SklAdd` : 99 -> 1024
   * `CrtAdd` : 99 -> 1024
   * `SklOffset` : 0.3 -> 0.5
