@@ -27,9 +27,9 @@ const gEmuJson =
             "nStr": {"nPowMulP": 12, "nAtkMulP": 8, "nSklMul": 4, "nCrtMul": 4},
             "nAgi": {"nSpdMul": 6, "nAtkMulC": 8, "nCrtMul": 12, "nDodMul": 4},
             "nInt": {"nPowMulM": 12, "nAtkMulM": 8, "nSklMul": 12, "nEvaMul": 4},
-            "nVit": {"nHpMaxMul": 128, "nDefMulP": 12, "nDodMul": 12, "nResMulP": 1},
-            "nSpr": {"nSdMaxMul": 160, "nDefMulP": 4, "nDefMulM": 4, "nResMulP": 1, "nResMulM": 1},
-            "nMnd": {"nHpMaxMul": 128, "nDefMulM": 12, "nEvaMul": 12, "nResMulM": 1}
+            "nVit": {"nHpMaxMul": 256, "nDefMulP": 12, "nDodMul": 12, "nResMulP": 1},
+            "nSpr": {"nSdMaxMul": 256, "nDefMulP": 4, "nDefMulM": 4, "nResMulP": 1, "nResMulM": 1},
+            "nMnd": {"nHpMaxMul": 256, "nDefMulM": 12, "nEvaMul": 12, "nResMulM": 1}
         },
         "Mul": {
             "nStr": {},
@@ -250,7 +250,7 @@ const gEmuJson =
             "stats": [
                 ["nPowMulM", 20.00, 100.00, 0.01],
                 ["nAtkAddM", 240.00, 4000.00, 0.01],
-                ["nSdMaxAdd", 2400.00, 0.00, 0.01],
+                ["nSdMaxAdd", 1200.00, 0.00, 0.01],
                 ["nDefAddM", 240.00, 4000.00, 0.01]
             ]
         },
@@ -280,7 +280,7 @@ const gEmuJson =
         },
         "2301": {
             "stats": [
-                ["nHpMaxAdd", 4800.00, 0.00, 0.01],
+                ["nHpMaxAdd", 2400.00, 0.00, 0.01],
                 ["nDefRatP", 5.00, 500.00, 0.01],
                 ["nDefRatM", 5.00, 500.00, 0.01],
                 ["nRflRat", 8.00, 0.00, 0.01]
@@ -288,26 +288,26 @@ const gEmuJson =
         },
         "2302": {
             "stats": [
-                ["nHpMaxAdd", 6400.00, 0.00, 0.01],
+                ["nHpMaxAdd", 3200.00, 0.00, 0.01],
                 ["nDefAddP", 240.00, 0.00, 0.01],
                 ["nDefAddM", 240.00, 0.00, 0.01],
-                ["nHpHealAdd", 1600.00, 0.00, 0.01]
+                ["nHpHealAdd", 800.00, 0.00, 0.01]
             ]
         },
         "2303": {
             "stats": [
-                ["nHpMaxAdd", 6400.00, 0.00, 0.01],
+                ["nHpMaxAdd", 3200.00, 0.00, 0.01],
                 ["nEvaAdd", 960.00, 0.00, 0.01],
                 ["nDodAdd", 960.00, 0.00, 0.01],
-                ["nHpHealAdd", 1600.00, 0.00, 0.01]
+                ["nHpHealAdd", 800.00, 0.00, 0.01]
             ]
         },
         "2304": {
             "stats": [
-                ["nHpMaxAdd", 1600.00, 0.00, 0.01],
-                ["nSdHealAdd", 2400.00, 0.00, 0.01],
+                ["nHpMaxAdd", 800.00, 0.00, 0.01],
+                ["nSdHealAdd", 1200.00, 0.00, 0.01],
                 ["nSdMaxMul", 20.00, 2500.00, 0.01],
-                ["nSdMaxAdd", 6400.00, 0.00, 0.01]
+                ["nSdMaxAdd", 3200.00, 0.00, 0.01]
             ]
         },
         "2305": {
@@ -321,22 +321,22 @@ const gEmuJson =
         "2306": {
             "stats": [
                 ["nHpMaxMul", 20.00, 5000.00, 0.01],
-                ["nHpMaxAdd", 4800.00, 0.00, 0.01],
+                ["nHpMaxAdd", 2400.00, 0.00, 0.01],
                 ["nDefAddP", 80.00, 0.00, 0.01],
-                ["nHpHealAdd", 1600.00, 0.00, 0.01]
+                ["nHpHealAdd", 800.00, 0.00, 0.01]
             ]
         },
         "2307": {
             "stats": [
                 ["nSdMaxMul", 20.00, 5000.00, 0.01],
-                ["nSdMaxAdd", 8000.00, 0.00, 0.01],
+                ["nSdMaxAdd", 4000.00, 0.00, 0.01],
                 ["nDefAddM", 240.00, 0.00, 0.01],
                 ["nDefRatM", 5.00, 1000.00, 0.01]
             ]
         },
         "2401": {
             "stats": [
-                ["nHpMaxAdd", 2400.00, 0.00, 0.01],
+                ["nHpMaxAdd", 1200.00, 0.00, 0.01],
                 ["nEvaAdd", 640.00, 0.00, 0.01],
                 ["nDodAdd", 640.00, 0.00, 0.01],
                 ["nHpHealRat", 0.00, 2400.00, 0.01]
@@ -344,16 +344,16 @@ const gEmuJson =
         },
         "2402": {
             "stats": [
-                ["nHpMaxAdd", 800.00, 0.00, 0.01],
+                ["nHpMaxAdd", 400.00, 0.00, 0.01],
                 ["nSdMaxMul", 20.00, 0.00, 0.01],
-                ["nSdMaxAdd", 3200.00, 0.00, 0.01],
+                ["nSdMaxAdd", 1600.00, 0.00, 0.01],
                 ["nSdHealRat", 0.00, 2400.00, 0.01]
             ]
         },
         "2403": {
             "stats": [
-                ["nHpMaxAdd", 1600.00, 0.00, 0.01],
-                ["nSdMaxAdd", 3200.00, 0.00, 0.01],
+                ["nHpMaxAdd", 800.00, 0.00, 0.01],
+                ["nSdMaxAdd", 1600.00, 0.00, 0.01],
                 ["nHpHealRat", 0.00, 3000.00, 0.01],
                 ["nSdHealRat", 0.00, 3000.00, 0.01]
             ]
