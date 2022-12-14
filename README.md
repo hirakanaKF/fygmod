@@ -11,17 +11,13 @@ __[Live demo can be found here](https://hirakanakf.github.io/fygmod/)__; you may
 # Explanation of Changes #
 
 Changes of `define/battle.js`:
-  * Defense damage multiplier is now `exp(log(2) * (log(attack base + DefendBase) - log(defense base + DefendBase)) + (attack ratio) / (100 + 2 * |attack ratio|) - (defense ratio) / (100 + 2 * |defense ratio|)))`
+  * Defense damage multiplier is now `(AttackBase + 65536 * exp(-DefenseRatio * EffectBase)) / (DefenseBase + 65536 * exp(-AttackRatio * EffectBase))`
     * In which `DefendBase`: 0.0 -> 65536.0
   * Serveral effect of skill changes to fit the custom formula:
     * Auras:
-      * CI: +10 defense ratio.
-      * BI: +15 physical attack ratio.
-      * MO: +15 magical attack ratio.
-      * SHENG: Reduce result by 0.125 before taking `exp()`.
-      * ZHI: Halves the result in the formula before taking `exp()`.
-      * DIAN: +100 defense ratio.
-      * HONG: Calculates damage using the higher multiplier.
+      * SHENG: Doubles effect of defense multiplier for shield.
+      * ZHI: Halves effect of defense multiplier.
+      * HONG: When attacking, calculates damage using the higher multiplier.
       * JUE: 0.75x damage taken from physical / magical damage, 0.5x damage taken from absolute damage.
       * DUNH: Calculates the multiplier using `1 + tanh()` instead of `exp()`.
     * Personal skills:
