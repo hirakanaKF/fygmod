@@ -36,6 +36,16 @@ ArenaEffect.Aura[404] = (_, A) => {
     for (const a of A) { a.pBpDmgL[0x10002] = a.pBpDmgR[0x10002] = p; }
 };
 
+// JUE: 0.75x damage taken from physical / magical damage, 0.5x damage taken from absolute damage.
+ArenaEffect.Aura[405] = (_, A) => {
+    const p = (a, b) => {
+        b.pp = gNumberCast(b.pp * 0.75);
+        b.pm = gNumberCast(b.pm * 0.75);
+        b.pa = gNumberCast(b.pa * 0.5);
+    };
+    for (const a of A) { a.pBpDmgL[2] = a.pBpDmgR[2] = p; }
+};
+
 // DUNH: Calculates the multiplier using `1 + tanh()` instead of `exp()`.
 ArenaEffect.Aura[407] = (_, A) => {
     const p = (a, b) => {
@@ -46,7 +56,6 @@ ArenaEffect.Aura[407] = (_, A) => {
     };
     for (const a of A) { a.pBpDmgL[0x10003] = a.pBpDmgR[0x10003] = p; }
 };
-
 
 // Custom defend ratio formula
 {
