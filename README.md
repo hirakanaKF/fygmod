@@ -39,7 +39,7 @@ Changes of `config/emu.json.js`:
     * Shows status of each fighter every turns.
   * `ScaleFactor`: 1.0 -> 0.5
     * This is the global damage, healing, resistant scale factor.
-  * `EffectBase`: 0.0 -> 2.7076061740622863e-3 ( ≈ log(2) / 256 )
+  * `EffectBase`: 0.0 -> 5.4152123481245725e-3 ( ≈ log(2) / 128 )
     * Enables ratio transforms:
       * Healing, Leeching, Reflection: `x * 0.01` -> `1 - exp(-x * EffectBase)`
       * Others : `x * 0.01` -> `exp(x * EffectBase)`
