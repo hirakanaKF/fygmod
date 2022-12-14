@@ -37,7 +37,7 @@ Changes of `config/emu.json.js`:
     * You can still run 1 vs 1 mode by holding the ctrl key.
   * `VerboseAll`: 0 -> 1
     * Shows status of each fighter every turns.
-  * `ScaleFactor`: 1.0 -> 0.25
+  * `ScaleFactor`: 1.0 -> 0.5
     * This is the global damage, healing, resistant scale factor.
   * `EffectBase`: 0.0 -> 2.7076061740622863e-3 ( ≈ log(2) / 256 )
     * Enables ratio transforms:
@@ -46,8 +46,8 @@ Changes of `config/emu.json.js`:
     * For more details, please see `fygemu/define/config.js`.
   * `SklAdd` : 99 -> 1024
   * `CrtAdd` : 99 -> 1024
-  * `SklOffset` : 0.3 -> 0.5
-  * `CrtOffset` : 0.3 -> 0.5
+  * `SklOff` : 0.3 -> 0.5
+  * `CrtOff` : 0.3 -> 0.5
  * `BaseStat` changes:
    * STR: __+12__ Physical Power, __+12__ Physical Attack, __+3 Skill Trigger__, __+3 Critical Hit__ 
    * AGI: __+6__ Speed, __+6 Critical Attack__, __+12__ Critical Hit, __+3 Critical Dodge__

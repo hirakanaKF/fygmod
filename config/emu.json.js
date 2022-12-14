@@ -6,7 +6,7 @@ const gEmuJson =
         "NoOverkill": 1,
         "BattleMode": 1,
         "VerboseAll": 1,
-        "ScaleFactor": 0.25,
+        "ScaleFactor": 0.5,
         "EffectBase": 2.7076061740622863e-3,
         "DefMul1": 0.1,
         "DefMul2": 0.01,
