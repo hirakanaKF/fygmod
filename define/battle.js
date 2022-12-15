@@ -13,8 +13,14 @@ ArenaEffect.Aura[206] = (_, A) => {
     const p = (a, b) => {
         a.spr = a.spr * a.spr; a.smr = a.smr * a.smr;
     };
-    for (const a of A) { a.pBpPowL[0x10000] = a.pBpPowR[0x10000] = p; }
+    for (const a of A) { a.pBpDmgL[0x7FF300CEn] = a.pBpDmgR[0x7FF300CEn] = p; }
 };
+
+// RE: Increase 6 points of speed ratio instead of 9 after battling.
+ArenaEffect.Aura[305] = (_, A) => {
+    const p = (a) => { a.SpdRat.inc(6); };
+    for (const a of A) { a.pCpEntL[0x030131n] = p; }
+}
 
 // ZHI : Halves effect of defense multiplier.
 ArenaEffect.Aura[308] = (_, A) => {
@@ -22,7 +28,7 @@ ArenaEffect.Aura[308] = (_, A) => {
         a.hpr = Math.sqrt(a.hpr); a.hmr = Math.sqrt(a.hmr);
         a.spr = Math.sqrt(a.spr); a.smr = Math.sqrt(a.smr);
     };
-    for (const a of A) { a.pBpPowL[0x10001] = a.pBpPowR[0x10001] = p; }
+    for (const a of A) { a.pBpDmgL[0x7FF30134n] = a.pBpDmgR[0x7FF30134n] = p; }
 };
 
 // HONG : Calculates damage using the higher multiplier.
@@ -33,7 +39,7 @@ ArenaEffect.Aura[404] = (_, A) => {
         if (b.spr > b.smr) { b.smr = b.spr; }
         b.spr = b.smr;
     };
-    for (const a of A) { a.pBpDmgL[0x10002] = a.pBpDmgR[0x10002] = p; }
+    for (const a of A) { a.pBpDmgL[0x7FF30194n] = a.pBpDmgR[0x7FF30194n] = p; }
 };
 
 // JUE: 0.75x damage taken from physical / magical damage, 0.5x damage taken from absolute damage.
@@ -43,18 +49,21 @@ ArenaEffect.Aura[405] = (_, A) => {
         b.pm = gNumberCast(b.pm * 0.75);
         b.pa = gNumberCast(b.pa * 0.5);
     };
-    for (const a of A) { a.pBpDmgL[2] = a.pBpDmgR[2] = p; }
+    for (const a of A) { a.pBpDmgL[0x7FF30195n] = a.pBpDmgR[0x7FF30195n] = p; }
 };
 
 // DUNH: Calculates the multiplier using `1 + tanh()` instead of `exp()`.
+//  Let y = e^x
+//  Then 1 + tanh(x) = 1 + (e^x - e^-x) / (e^x + e^-x) = 2e^2x / (e^2x + 1) = y^2 / (0.5y^2 + 0.5)
 ArenaEffect.Aura[407] = (_, A) => {
-    const p = (a, b) => {
-        a.hpr = 1 + Math.tanh(Math.log(a.hpr)) || 0;
-        a.hmr = 1 + Math.tanh(Math.log(a.hmr)) || 0;
-        a.spr = 1 + Math.tanh(Math.log(a.spr)) || 0;
-        a.smr = 1 + Math.tanh(Math.log(a.smr)) || 0;
-    };
-    for (const a of A) { a.pBpDmgL[0x10003] = a.pBpDmgR[0x10003] = p; }
+    const 
+        f = (x) => (x = x * x) && x / (0.5 * x + 0.5),
+        p = (a, b) => {
+            a.hpr = f(a.hpr); a.hmr = f(a.hmr);
+            a.spr = f(a.spr); a.smr = f(a.smr);
+        }
+    ;
+    for (const a of A) { a.pBpDmgL[0x7FF30197n] = a.pBpDmgR[0x7FF30197n] = p; }
 };
 
 // Custom defend ratio formula

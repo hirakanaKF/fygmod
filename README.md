@@ -6,24 +6,22 @@ Please clone this project with `git clone --recurse-submodules`.
 
 Update submodule using `git submodule update --remote`. 
 
-__[Live demo can be found here](https://hirakanakf.github.io/fygmod/)__; you may need to clear browser caches to see the latest commits.
+__[A live demo could be found here](https://hirakanakf.github.io/fygmod/)__; you may need to clear browser caches manually to see the latest commits.
 
 # Explanation of Changes #
 
 Changes of `define/battle.js`:
-  * Defense damage multiplier is now `(AttackBase + 65536 * exp(-DefenseRatio * EffectBase)) / (DefenseBase + 65536 * exp(-AttackRatio * EffectBase))`
-    * In which `DefendBase`: 0.0 -> 65536.0
+  * Defense damage multiplier is now `(AttackBase + DefendBase * exp(-DefenseRatio * EffectBase)) / (DefenseBase + DefendBase * exp(-AttackRatio * EffectBase))`
+    * In which `DefendBase = 65536.0`.
   * Serveral effect of skill changes to fit the custom formula:
     * Auras:
       * SHENG: Doubles effect of defense multiplier for shield.
+      * RE: Increase 6 points of speed ratio instead of 9 after battling.
       * ZHI: Halves effect of defense multiplier.
       * HONG: When attacking, calculates damage using the higher multiplier.
       * JUE: 0.75x damage taken from physical / magical damage, 0.5x damage taken from absolute damage.
-      * DUNH: Calculates the multiplier using `1 + tanh()` instead of `exp()`.
-    * Personal skills:
-      * WU: +30 defense ratio.
-      * MING: -200 defense ratio.
-  * For more details, please see `define/battle.js`.
+      * DUNH: Calculates the damage multiplier using `1 + tanh()` instead of `exp()`.
+  * For more details, please refers to `define/battle.js`.
 
 Changes of `config/emu.json.js`:
 * `Rule` changes:
