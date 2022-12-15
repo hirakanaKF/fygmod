@@ -15,64 +15,161 @@ const gUsrJson =
     "Coin3": " - ",
     "Cost": "0",
     "NpcLv": "+33%",
-    "AssetRoot": "demo/game-icons/",
-    "ActorDir": "actor/",
-    "ActorMap": {
-        "Z.": "",
-        ".Z": ".png",
-        "N.": "",
-        ".N": ".png",
-        "L.": "",
-        ".L": ".png",
-        "R.": "",
-        ".R": ".png",
-        "3901": "iron-mask",
-        "3902": "spider-alt",
-        "3903": "magic-lamp",
-        "3904": "anteater",
-        "3905": "hunter-eyes",
-        "3906": "porcupine",
-        "demo/game-icons/actor/3000.png": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
-        "demo/game-icons/actor/3001.png": "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
-        "demo/game-icons/actor/3002.png": "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
-        "demo/game-icons/actor/3003.png": "https://upload.wikimedia.org/wikipedia/commons/d/d2/RWS_Tarot_03_Empress.jpg",
-        "demo/game-icons/actor/3004.png": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
-        "demo/game-icons/actor/3005.png": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg",
-        "demo/game-icons/actor/3006.png": "https://upload.wikimedia.org/wikipedia/commons/3/3a/TheLovers.jpg",
-        "demo/game-icons/actor/3007.png": "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
-        "demo/game-icons/actor/3008.png": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg",
-        "demo/game-icons/actor/3009.png": "https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg"
-    },
-    "EquipDir": "equip/",
-    "EquipMap": {
-        "Z.": "",
-        ".Z": ".png",
-        "_": "-",
-        "2101": "relic-blade",
-        "2102": "heavy-arrow",
-        "2103": "wizard-staff",
-        "2104": "dripping-blade",
-        "2105": "lightning-bow",
-        "2106": "dagger-rose",
-        "2107": "fairy-wand",
-        "2108": "swords-emblem",
-        "2109": "piercing-sword",
-        "2110": "thorned-arrow",
-        "2201": "gloves",
-        "2202": "diamond-ring",
-        "2203": "skull-ring",
-        "2204": "ring",
-        "2205": "globe-ring",
-        "2301": "metal-skirt",
-        "2302": "leather-armor",
-        "2303": "heart-armor",
-        "2304": "cloak",
-        "2305": "spiked-shoulder-armor",
-        "2306": "saiyan-suit",
-        "2307": "cape",
-        "2401": "top-hat",
-        "2402": "tiara",
-        "2403": "ribbon"
-    },
+    "MapActor": [
+        {
+            "Dir": "demo/game-icons/actor/",
+            "Ext": ".png",
+            "Prefix": "",
+            "Suffix": "",
+            "Kind": {
+                "3901": {
+                    "Symbol": "iron-mask"
+                },
+                "3902": {
+                    "Symbol": "spider-alt"
+                },
+                "3903": {
+                    "Symbol": "magic-lamp"
+                },
+                "3904": {
+                    "Symbol": "anteater"
+                },
+                "3905": {
+                    "Symbol": "hunter-eyes"
+                },
+                "3906": {
+                    "Symbol": "porcupine"
+                }
+            },
+            "Mode": {}
+        },
+        {
+            "Dir": "https://upload.wikimedia.org/wikipedia/commons/",
+            "Ext": "",
+            "Kind": {
+                "3000": {
+                    "Symbol": "9/90/RWS_Tarot_00_Fool.jpg"
+                },
+                "3001": {
+                    "Symbol": "d/de/RWS_Tarot_01_Magician.jpg"
+                },
+                "3002": {
+                    "Symbol": "8/88/RWS_Tarot_02_High_Priestess.jpg"
+                },
+                "3003": {
+                    "Symbol": "d/d2/RWS_Tarot_03_Empress.jpg"
+                },
+                "3004": {
+                    "Symbol": "c/c3/RWS_Tarot_04_Emperor.jpg"
+                },
+                "3005": {
+                    "Symbol": "8/8d/RWS_Tarot_05_Hierophant.jpg"
+                },
+                "3006": {
+                    "Symbol": "3/3a/TheLovers.jpg"
+                },
+                "3007": {
+                    "Symbol": "9/9b/RWS_Tarot_07_Chariot.jpg"
+                },
+                "3008": {
+                    "Symbol": "e/e0/RWS_Tarot_11_Justice.jpg"
+                },
+                "3009": {
+                    "Symbol": "4/4d/RWS_Tarot_09_Hermit.jpg"
+                },
+            }
+        }
+    ],
+    "MapEquip": [
+        {
+            "Dir": "demo/game-icons/equip/",
+            "Ext": ".png",
+            "Prefix": "z",
+            "Kind": {
+                "2101": {
+                    "Symbol": "relic-blade"
+                },
+                "2102": {
+                    "Symbol": "heavy-arrow"
+                },
+                "2103": {
+                    "Symbol": "wizard-staff"
+                },
+                "2104": {
+                    "Symbol": "dripping-blade"
+                },
+                "2105": {
+                    "Symbol": "lightning-bow"
+                },
+                "2106": {
+                    "Symbol": "dagger-rose"
+                },
+                "2107": {
+                    "Symbol": "fairy-wand"
+                },
+                "2108": {
+                    "Symbol": "swords-emblem"
+                },
+                "2109": {
+                    "Symbol": "piercing-sword"
+                },
+                "2110": {
+                    "Symbol": "thorned-arrow"
+                },
+                "2201": {
+                    "Symbol": "gloves"
+                },
+                "2202": {
+                    "Symbol": "diamond-ring"
+                },
+                "2203": {
+                    "Symbol": "skull-ring"
+                },
+                "2204": {
+                    "Symbol": "ring"
+                },
+                "2205": {
+                    "Symbol": "globe-ring"
+                },
+                "2301": {
+                    "Symbol": "metal-skirt"
+                },
+                "2302": {
+                    "Symbol": "leather-armor"
+                },
+                "2303": {
+                    "Symbol": "heart-armor"
+                },
+                "2304": {
+                    "Symbol": "cloak"
+                },
+                "2305": {
+                    "Symbol": "spiked-shoulder-armor"
+                },
+                "2306": {
+                    "Symbol": "saiyan-suit"
+                },
+                "2307": {
+                    "Symbol": "cape"
+                },
+                "2401": {
+                    "Symbol": "top-hat"
+                },
+                "2402": {
+                    "Symbol": "tiara"
+                },
+                "2403": {
+                    "Symbol": "ribbon"
+                }
+            },
+            "Mode": {
+                "1": {"Suffix": "-1"},
+                "2": {"Suffix": "-2"},
+                "3": {"Suffix": "-3"},
+                "4": {"Suffix": "-4"},
+                "5": {"Suffix": "-5"}
+            }
+        }
+    ],
     "RawUnit": 1
 }

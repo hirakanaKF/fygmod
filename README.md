@@ -30,9 +30,6 @@ Changes of `config/emu.json.js`:
   * `NoOverkill`: 0 -> 1
     * Disables leeching from corpses, mainly for the rumble mode.
     * This also prevents leech under the health / shield lock.
-  * `BattleMode`: 0 -> 1
-    * Default game mode to the rumble mode.
-    * You can still run 1 vs 1 mode by holding the ctrl key.
   * `VerboseAll`: 0 -> 1
     * Shows status of each fighter every turns.
   * `ScaleFactor`: 1.0 -> 1.0
