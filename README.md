@@ -35,7 +35,7 @@ Changes of `config/emu.json.js`:
     * You can still run 1 vs 1 mode by holding the ctrl key.
   * `VerboseAll`: 0 -> 1
     * Shows status of each fighter every turns.
-  * `ScaleFactor`: 1.0 -> 0.5
+  * `ScaleFactor`: 1.0 -> 1.0
     * This is the global damage, healing, resistant scale factor.
   * `EffectBase`: 0.0 -> 5.4152123481245725e-3 ( ≈ log(2) / 128 )
     * Enables ratio transforms:
