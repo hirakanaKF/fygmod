@@ -16,10 +16,22 @@ ArenaEffect.Aura[206] = (_, A) => {
     for (const a of A) { a.pBpDmgL[0x7FF300CEn] = a.pBpDmgR[0x7FF300CEn] = p; }
 };
 
+// SHANG: -75 Health Recover -> -256 Health Recover
+ArenaEffect.Aura[301] = (_, A) => {
+    const n = A.size, r0 = gNumberCast(n * 256 * _.mDpr), r1 = gNumberCast((n - 1) * 256 * _.mDpr);
+    for (const b of _.AO) { b.mHpRecRat -= A.has(b) ? r1 : r0; }
+};
+
+// SHEN: -75 Shield Recover -> -256 Shield Recover
+ArenaEffect.Aura[302] = (_, A) => {
+    const n = A.size, r0 = gNumberCast(n * 256 * _.mDpr), r1 = gNumberCast((n - 1) * 256 * _.mDpr);
+    for (const b of _.AO) { b.mSdRecRat -= A.has(b) ? r1 : r0; }
+}
+
 // RE: Increase 6 points of speed ratio instead of 9 after battling.
 ArenaEffect.Aura[305] = (_, A) => {
     const p = (a) => { a.SpdRat.inc(6); };
-    for (const a of A) { a.pCpEntL[0x030131n] = p; }
+    for (const a of A) { a.pCpSetL[0x030131n] = p; }
 }
 
 // ZHI : Halves effect of defense multiplier.
@@ -66,16 +78,28 @@ ArenaEffect.Aura[407] = (_, A) => {
     for (const a of A) { a.pBpDmgL[0x7FF30197n] = a.pBpDmgR[0x7FF30197n] = p; }
 };
 
+// SHIELD: -40 Recover -> -128 Recover
+ArenaEffect.Myst[2108] = (_, A) => {
+    const n = A.size, 
+        r0 = gNumberCast(n * 128 * _.mDpr),
+        r1 = gNumberCast((n - 1) * 128 * _.mDpr)
+    ;
+    for (const b of _.AO) {
+        if (A.has(b)) { b.mHpRecRat -= r1; b.mSdRecRat -= r1; continue; }
+        b.mHpRecRat -= r0; b.mSdRecRat -= r0;
+    }
+};
+
 // Custom defend ratio formula
 {
     const BP = BattleObject.prototype;
 
     // Custom defend formula
-    BP.defendImpl = function (that) {
+    BP.cpDmg = function (that) {
         let hpr, hmr;
 
-        this.hpr = hpr = (that.afp + 65536 * gEffectAmul(-this.brp)) / (this.bfp + 65536 * gEffectAmul(-this.arp));
-        this.hmr = hmr = (that.afm + 65536 * gEffectAmul(-this.brm)) / (this.bfm + 65536 * gEffectAmul(-this.arm));
+        this.hpr = hpr = (that.afp + 65536 * gEffectAmul(-this.brp)) / (this.bfp + 65536 * gEffectAmul(-this.arp)) || 0;
+        this.hmr = hmr = (that.afm + 65536 * gEffectAmul(-this.brm)) / (this.bfm + 65536 * gEffectAmul(-this.arm)) || 0;
         this.spr = Math.sqrt(hpr);
         this.smr = Math.sqrt(hmr);
     };

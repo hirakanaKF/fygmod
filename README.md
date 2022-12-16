@@ -16,11 +16,15 @@ Changes of `define/battle.js`:
   * Serveral effect of skill changes to fit the custom formula:
     * Auras:
       * SHENG: Doubles effect of defense multiplier for shield.
+      * SHANG: `-75` Health Recover -> `-256` Health Recover.
+      * SHEN: `-75` Shield Recover -> `-256` Shield Recover.
       * RE: Increase 6 points of speed ratio instead of 9 after battling.
       * ZHI: Halves effect of defense multiplier.
       * HONG: When attacking, calculates damage using the higher multiplier.
       * JUE: 0.75x damage taken from physical / magical damage, 0.5x damage taken from absolute damage.
       * DUNH: Calculates the damage multiplier using `1 + tanh()` instead of `exp()`.
+    * Equips:
+      * SHIELD: `-40` Recover -> `-128` Recover.
   * For more details, please refers to `define/battle.js`.
 
 Changes of `config/emu.json.js`:
