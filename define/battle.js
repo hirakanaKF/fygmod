@@ -13,7 +13,7 @@ ArenaEffect.Aura[206] = (_, A) => {
     const p = (a, b) => {
         a.spr = a.spr * a.spr; a.smr = a.smr * a.smr;
     };
-    for (const a of A) { a.pBpDmgL[0x7FF300CEn] = a.pBpDmgR[0x7FF300CEn] = p; }
+    for (const a of A) { a.pBpDmgL.set(0x7FF300CEn, p); a.pBpDmgR.set(0x7FF300CEn, p); }
 };
 
 // SHANG: -75 Health Recover -> -256 Health Recover
@@ -31,7 +31,7 @@ ArenaEffect.Aura[302] = (_, A) => {
 // RE: Increase 6 points of speed ratio instead of 9 after battling.
 ArenaEffect.Aura[305] = (_, A) => {
     const p = (a) => { a.SpdRat.inc(6); };
-    for (const a of A) { a.pCpSetL[0x030131n] = p; }
+    for (const a of A) { a.pCpSetL.set(0x030131n, p); }
 }
 
 // ZHI : Halves effect of defense multiplier.
@@ -40,7 +40,7 @@ ArenaEffect.Aura[308] = (_, A) => {
         a.hpr = Math.sqrt(a.hpr); a.hmr = Math.sqrt(a.hmr);
         a.spr = Math.sqrt(a.spr); a.smr = Math.sqrt(a.smr);
     };
-    for (const a of A) { a.pBpDmgL[0x7FF30134n] = a.pBpDmgR[0x7FF30134n] = p; }
+    for (const a of A) { a.pBpDmgL.set(0x7FF30134n, p); a.pBpDmgR.set(0x7FF30134n, p); }
 };
 
 // HONG : Calculates damage using the higher multiplier.
@@ -51,7 +51,7 @@ ArenaEffect.Aura[404] = (_, A) => {
         if (b.spr > b.smr) { b.smr = b.spr; }
         b.spr = b.smr;
     };
-    for (const a of A) { a.pBpDmgL[0x7FF30194n] = a.pBpDmgR[0x7FF30194n] = p; }
+    for (const a of A) { a.pBpDmgL.set(0x7FF30194n, p); a.pBpDmgR.set(0x7FF30194n, p); }
 };
 
 // JUE: 0.75x damage taken from physical / magical damage, 0.5x damage taken from absolute damage.
@@ -61,7 +61,7 @@ ArenaEffect.Aura[405] = (_, A) => {
         b.pm = gNumberCast(b.pm * 0.75);
         b.pa = gNumberCast(b.pa * 0.5);
     };
-    for (const a of A) { a.pBpDmgL[0x7FF30195n] = a.pBpDmgR[0x7FF30195n] = p; }
+    for (const a of A) { a.pBpDmgL.set(0x7FF30195n, p); a.pBpDmgR.set(0x7FF30195n, p); }
 };
 
 // DUNH: Calculates the multiplier using `1 + tanh()` instead of `exp()`.
@@ -75,7 +75,7 @@ ArenaEffect.Aura[407] = (_, A) => {
             a.spr = f(a.spr); a.smr = f(a.smr);
         }
     ;
-    for (const a of A) { a.pBpDmgL[0x7FF30197n] = a.pBpDmgR[0x7FF30197n] = p; }
+    for (const a of A) { a.pBpDmgL.set(0x7FF30197n, p); a.pBpDmgR.set(0x7FF30197n, p); }
 };
 
 // SHIELD: -40 Recover -> -128 Recover
