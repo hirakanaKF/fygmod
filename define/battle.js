@@ -95,11 +95,11 @@ ArenaEffect.Myst[2108] = (_, A) => {
     const BP = BattleObject.prototype;
 
     // Custom defend formula
-    BP.cpDmg = function (that) {
+    BP.bpDmg = function (that) {
         let hpr, hmr;
 
-        this.hpr = hpr = (that.afp + 65536 * gEffectAmul(-this.brp)) / (this.bfp + 65536 * gEffectAmul(-this.arp)) || 0;
-        this.hmr = hmr = (that.afm + 65536 * gEffectAmul(-this.brm)) / (this.bfm + 65536 * gEffectAmul(-this.arm)) || 0;
+        this.hpr = hpr = (that.afp + 65536 * gEffectAmul(-this.brp)) / (this.bfp + 65536 * gEffectAmul(-that.arp)) || 0;
+        this.hmr = hmr = (that.afm + 65536 * gEffectAmul(-this.brm)) / (this.bfm + 65536 * gEffectAmul(-that.arm)) || 0;
         this.spr = Math.sqrt(hpr);
         this.smr = Math.sqrt(hmr);
     };
